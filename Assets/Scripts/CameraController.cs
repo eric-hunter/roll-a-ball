@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 
     private Vector3 offset;
 
-    // Start is called before the first frame update
+    //START IS CALLED BEFORE FIRST FRAME UPDATE.
     private void Start()
     {
         offset = transform.position - Player.transform.position;
