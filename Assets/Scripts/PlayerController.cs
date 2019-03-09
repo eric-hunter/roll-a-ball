@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float thrust;
+    public float Speed;
     private Rigidbody rb;
 
+    //CALLED BEFORE THE FIRST FRAME IS RENDERED.
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
-        rb.AddForce(movement);
+        rb.AddForce(movement * Speed);
     }
 
 }
