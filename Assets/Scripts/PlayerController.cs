@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public partial class PlayerController : MonoBehaviour
 {
     public float Speed;
     public Text CountText;
@@ -36,16 +36,6 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
         rb.AddForce(movement * Speed);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pick Up"))
-        {
-            other.gameObject.SetActive(false);
-            count++;
-            SetCountText();
-        }
     }
 
     private void SetCountText()
